@@ -1,0 +1,395 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+main{
+	background-color: #eee;
+	text-align: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+section{
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+	margin: 0 auto;
+}
+
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	position: fixed;
+	overflow: auto;
+	max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+	border: 1px solid #efefef;
+	background-color: orange;
+	z-index: 1;
+}
+
+.logo{
+	width: 30%;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu{
+	width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu div{
+	border-radius: 3px;
+	padding: 3px;
+}
+
+.menu div:hover {
+    background-color: yellow;
+}
+
+/*解像度600px以下なら*/
+@media screen and (max-width: 600px) {
+    .nav {
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .logo {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+
+    .menu {
+      width: 50%;
+      font-size: 16px;
+    }
+	.menu div{padding: 0 10px;}
+}
+
+.header_ttl{
+	margin-top: 100px;
+	background-image: url(../img/mainbg.png);
+    background-size: cover;
+    background-position: center;
+    color: azure;
+    height: 250px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 960px;
+}
+
+.header_ttl h1{
+	font-size: 48px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.header_ttl h2{
+	font-size: 36px;
+	padding: 0px;
+	margin-top: 40/0.9px;
+}
+
+/* .intro{} */
+.intro h3{
+	color: #ffd61a;
+	font-size: 24px;
+	margin-top: 120px;
+	font-weight: bold;
+}
+
+.intro h4{
+	margin-top: 24px;
+	font-weight: bold;
+}
+
+.intro h5{ margin-top: 64px; }
+.intro p{ margin-top: 40px; }
+
+/*解像度600px以下なら*/
+@media screen and (max-width: 600px) {
+    .header_ttl { height: 180px; }
+
+    .header_ttl h1 {
+      font-size: 24px;
+	  margin-top: 30px;
+    }
+
+    .header_ttl h2 {
+      font-size: 18px;
+      margin-top: 20px;
+	  padding: 0 5px;
+    }
+}
+
+.slider{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 960px;
+	margin-top: 80px;
+}
+
+/*解像度600px以下なら*/
+@media screen and (max-width: 600px) {
+	.slider div {width: 360px;}
+}
+
+.slider img{backface-visibility: hidden;}/*背面非表示*/
+
+.content{ margin-top: 64px; }
+.content p{ margin-bottom: 64px;}
+
+.C_box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 720px;
+}
+
+.C_box img{
+	max-width: 100%;
+	height: auto;
+}
+
+.C_box_item{ width: 50%; }
+.C_box_item div{ width: 100%; }
+
+/*解像度960px以上なら*/
+@media screen and (min-width: 960px) {
+	.C_box{
+		flex-direction: row;
+		width: 960px;
+		background-color: #fafafa;
+	}
+
+	.C_box_item:nth-child(1) { order: 1; }
+	.C_box_item:nth-child(2) { order: 2; }
+	.C_box_item:nth-child(3) { order: 4; }
+	.C_box_item:nth-child(4) { order: 3; }
+	.C_box_item:nth-child(5) { order: 5; }
+	.C_box_item:nth-child(6) { order: 6; }
+}
+
+.C_box_text{
+	padding-left: 48px;
+	padding-right: 48px;
+	justify-content: center;
+	text-align: justify;
+}
+
+.C_box_text h3{
+	color: #222;
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+#NEWS h3{
+	color: #ffd61a;
+	font-size: 24px;
+	margin-top: 64px;
+	font-weight: bold;
+}
+
+.N_ttl h4{ margin-bottom: 64px; }
+
+.N_box{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/*解像度600px以下なら*/
+@media screen and (max-width: 600px) {
+	.N_box{
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+}
+
+.N_box{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.N_box_item{
+	width: 300px;
+	margin-right: 32px;
+}
+.N_box_item:last-child { margin-right: 0; }
+
+.N_box_text{ text-align: justify;
+	margin-top: 32px;
+}
+.N_box_text h4 { margin-bottom: 0; }
+.N_box_text p { margin-top: 24px; }
+
+#NEWS button{
+	margin-top: 56px;
+	margin-bottom: 48px;
+	font-size: 21px;
+	width: 300px;
+	height: 60px;
+	color: azure;
+	background-color: #ffd61a;
+}
+
+#ACCESS{ background-color: #fafafa; }
+
+.info{
+	margin-top: 64px;
+	text-align: left;
+}
+
+.info p{ margin-top: 24px; }
+
+/*解像度600px以下なら*/
+@media screen and (max-width: 600px) {
+	.info iframe{
+		width: 320px;
+		height: 180px;
+	}
+}
+
+.info td:nth-child(even) {
+	padding-bottom: 24px;
+	padding-left: 48px;
+}
+
+.info tr:last-child td:last-child {
+	padding-bottom: 0;
+}
+
+.info table{ margin-bottom: 80px; }
+
+.cta_ttl{ margin: 64px 0; }
+.cta_text p:nth-child(1){ padding-bottom: 32px; }
+.cta_text p:nth-child(2){ padding-bottom: 80px; }
+
+.form td{ text-align: left; }
+.form td:nth-child(odd){ padding-right: 120px; }
+
+.form td:nth-child(2){ padding-bottom: 24px;}
+.form td:nth-child(4){ padding-bottom: 24px;}
+
+.form td:nth-child(6){ padding-bottom: 40px;}
+.form td:nth-child(8){ padding-bottom: 32px;}
+.form td:nth-child(10){ padding-bottom: 40px;}
+
+.enter{
+	background-color: #fafafa;
+	border: 1px solid #bfbfbf;
+	width: 328px;
+	height: 36px;
+}
+
+.check div{	margin-bottom: 24px; }
+.check div:last-child { margin-bottom: 0px; }
+
+.check input[type="checkbox"]{
+	width: 24px;
+	height: 24px;
+	font-size: 14px;
+	color: #f0ebe5;
+	margin-right: 40px;
+}
+
+textarea { white-space: pre-wrap; }/* ユーザ改行反映 */
+
+.detail {
+	background-color: #fafafa;
+	border: 1px solid #bfbfbf;
+	width: 328px;
+	height: 108px;
+}
+
+#CONTACT button{
+	margin-bottom: 120px;
+	font-size: 18px;
+	width: 298px;
+	height: 54px;
+	color: azure;
+	background-color: #ffd61a;
+}
+
+/*解像度600px以下なら*/
+@media screen and (max-width: 600px) {
+	.form td:nth-child(odd){ padding-right: 20px; }
+	.enter{	width: 218px; }
+	.detail{ width: 218px; }
+	.check input[type="checkbox"]{
+		margin-right: 10px;
+	}
+}
+
+#END button{
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	margin: auto;
+	bottom: 82px;
+	right: 20px;
+	background-color: #707070;
+}
+
+footer{
+	font-size: 18px;
+	background-color: #707070;
+	padding: 32px 0;
+	width: 960px;
+	margin: 0 auto;
+}
+
+/*解像度600px以下なら*/
+@media screen and (max-width: 600px) {
+	footer{
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
